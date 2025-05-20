@@ -1,0 +1,236 @@
+:root {
+    --tridactyl-font-family: "Monospace", sans-serif;
+    --tridactyl-bg: #161a20;
+    --tridactyl-fg: white;
+
+    --tridactyl-status-font-size: 16px;
+    --tridactyl-status-font-family: "Monospace", "San Francisco";
+    --tridactyl-status-font-bg: var(--tridactyl-cmdl-bg);
+    --tridactyl-status-border: 2px solid black;
+    --tridactyl-status-border-radius: 0px;
+
+    --tridactyl-header-font-size: 16px;
+
+    --tridactyl-of-fg: black;
+    --tridactyl-of-bg: #ffd662;
+
+    --tridactyl-hintspan-fg: white;
+    --tridactyl-hintspan-bg: #204e8a;
+
+    --tridactyl-hint-active-fg: #333;
+    --tridactyl-hint-active-bg: #006e51;
+    --tridactyl-hint-active-outline: 1px solid #000;
+
+    --tridactyl-hint-bg: rgba(13, 31, 54, 0.25);
+    --tridactyl-hint-outline: 1px solid var(--tridactyl-hintspan-bg);
+
+    --tridactyl-cmdl-font-size: 1.5rem;
+    --tridactyl-cmplt-option-height: 1.9em;
+
+    --tridactyl-border-radius: 0px;
+
+    --buffer-font-size: 16px !important;
+}
+
+:root.TridactylOwnNamespace {
+    scrollbar-width: thin;
+}
+
+:root.TridactylOwnNamespace a {
+    color: #3b84ef;
+}
+
+:root.TridactylOwnNamespace code {
+    background-color: #2a333c;
+    padding: 3px 7px;
+}
+
+:root #command-line-holder {
+    order: 1;
+}
+
+:root #command-line-holder,
+:root #tridactyl-input {
+    border-radius: var(--tridactyl-border-radius) !important;
+}
+
+:root #tridactyl-colon::before {
+    content: "";
+}
+
+:root #tridactyl-input {
+    width: 96%;
+    padding: 1rem;
+}
+
+:root #completions table {
+    font-weight: 300;
+    table-layout: fixed;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+:root #completions>div {
+    max-height: calc(10 * var(--tridactyl-cmplt-option-height));
+    min-height: calc(10 * var(--tridactyl-cmplt-option-height));
+}
+
+:root #completions {
+    border: none !important;
+    font-family: var(--tridactyl-font-family);
+    order: 2;
+    margin-top: 10px;
+    border-radius: var(--tridactyl-border-radius);
+}
+
+/* commands list */
+:root #completions div table {
+    font-size: var(--buffer-font-size);
+}
+
+/* tab open history list */
+:root #completions .HistoryCompletionSource table {
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+    font-size: var(--buffer-font-size);
+}
+
+/* currently open tabs list */
+:root #completions .BufferCompletionSource table {
+    width: unset;
+    border-spacing: unset;
+    table-layout: unset;
+    font-size: var(--buffer-font-size);
+}
+
+:root #completions table tr .title {
+    width: 50%;
+}
+
+:root #completions tr .documentation {
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: ellipsis;
+}
+
+:root #completions .sectionHeader {
+    background: transparent;
+    padding: 1rem 1rem 0.4rem !important;
+}
+
+:root #cmdline_iframe {
+    position: fixed !important;
+    bottom: unset;
+    top: 25% !important;
+    left: 10% !important;
+    z-index: 2147483647 !important;
+    width: 80% !important;
+    /* filter: drop-shadow(0px 0px 20px #000000) !important; */
+    color-scheme: only light;
+    /* Prevent Firefox from adding a white background on dark-mode sites */
+}
+
+/* disable status indicator if fullscreening a video (like youtube) */
+:root:fullscreen .TridactylStatusIndicator {
+    display: none !important;
+}
+
+:root .TridactylStatusIndicator {
+    position: fixed !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    font-weight: 200 !important;
+    padding: 5px !important;
+    --tridactyl-status-bg: #C9FF27;
+    background: var(--tridactyl-status-bg) !important;
+    color: #000 !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+}
+
+:root .TridactylStatusIndicator.TridactylPrivate:before {
+    content: "(⁠⌐⁠■⁠-⁠■⁠) ";
+    /* font-family: "JetBrainsMono NF"; */
+}
+
+/* REGULAR SESSION STYLING*/
+/* Insert mode */
+:root .TridactylStatusIndicator[class$="TridactylModeinsert"] {
+    --tridactyl-status-bg: #87CEEB;
+    background: var(--tridactyl-status-bg) !important;
+}
+
+/* Visual mode */
+:root .TridactylStatusIndicator[class$="TridactylModevisual"] {
+    --tridactyl-status-bg: #e63946;
+    background: var(--tridactyl-status-bg) !important;
+}
+
+/* Input mode */
+:root .TridactylStatusIndicator[class$="TridactylModeinput"] {
+    --tridactyl-status-bg: #219ebc;
+    background: var(--tridactyl-status-bg) !important;
+}
+
+/* Ignore mode */
+:root .TridactylStatusIndicator[class$="TridactylModeignore"] {
+    --tridactyl-status-bg: #9966CC;
+    background: var(--tridactyl-status-bg) !important;
+}
+
+/* Hint mode */
+:root .TridactylStatusIndicator[class$="TridactylModehint"] {
+    --tridactyl-status-bg: #38b000;
+    background: var(--tridactyl-status-bg) !important;
+}
+
+/* Normal */
+:root .TridactylStatusIndicator[class$="TridactylModenormal"] {
+    --tridactyl-status-bg: #C9FF27;
+    background: var(--tridactyl-status-bg) !important;
+}
+
+/* PRIVATE SESSION STYLING*/
+/* /1* Insert mode *1/ */
+/* :root .TridactylStatusIndicator[class$="TridactylModeinsert"].TridactylPrivate { */
+/* 	--tridactyl-status-bg: #87CEEB; */
+/* 	background: var(--tridactyl-status-bg) !important; */
+/* 	border: 3px solid purple !important; */
+/* } */
+
+/* /1* Visual mode *1/ */
+/* :root .TridactylStatusIndicator[class$="TridactylModevisual"].TridactylPrivate{ */
+/* 	--tridactyl-status-bg: #e63946; */
+/* 	background: var(--tridactyl-status-bg) !important; */
+/* 	border: 3px solid purple !important; */
+/* } */
+
+/* /1* Input mode *1/ */
+/* :root .TridactylStatusIndicator[class$="TridactylModeinput"].TridactylPrivate { */
+/* 	--tridactyl-status-bg: #219ebc; */
+/* 	background: var(--tridactyl-status-bg) !important; */
+/* 	border: 3px solid purple !important; */
+/* } */
+
+/* /1* Ignore mode *1/ */
+/* :root .TridactylStatusIndicator[class$="TridactylModeignore"].TridactylPrivate { */
+/* 	--tridactyl-status-bg: #9966CC; */
+/* 	background: var(--tridactyl-status-bg) !important; */
+/* 	border: 3px solid purple !important; */
+/* } */
+
+/* /1* Hint mode *1/ */
+/* :root .TridactylStatusIndicator[class$="TridactylModehint"].TridactylPrivate { */
+/* 	--tridactyl-status-bg: #38b000; */
+/* 	background: var(--tridactyl-status-bg) !important; */
+/* 	border: 3px solid purple !important; */
+/* } */
+
+/* /1* Normal *1/ */
+/* :root .TridactylStatusIndicator[class$="TridactylModenormal"].TridactylPrivate { */
+/* 	--tridactyl-status-bg: #C9FF27; */
+/* 	background: var(--tridactyl-status-bg) !important; */
+/* 	border: 3px solid purple !important; */
+/* } */

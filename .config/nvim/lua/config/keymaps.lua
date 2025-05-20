@@ -61,3 +61,12 @@ vim.keymap.set("n", "<A-j>", function()
 end, { noremap = true, silent = true })
 
 vim.keymap.set("n", "q", "<cmd>q<CR>")
+
+vim.keymap.set("n", "K", function()
+	local is_diagnostic = require("config.helpers").is_diagnostic()
+	if is_diagnostic == true then
+		return vim.diagnostic.open_float({ scope = "cursor" })
+	else
+		return vim.lsp.buf.hover()
+	end
+end)

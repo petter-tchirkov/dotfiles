@@ -10,8 +10,6 @@ return {
 		},
 		event = "InsertEnter",
 		version = "v1.*",
-		---@module 'blink.cmp'
-		---@type blink.cmp.Config
 		opts = {
 			keymap = {
 				preset = "enter",
@@ -83,17 +81,6 @@ return {
 						score_offset = 100, -- show at a higher priority than lsp
 					},
 				},
-			},
-		},
-	},
-	{
-		"saghen/blink.cmp",
-		dependencies = "echasnovski/mini.snippets",
-		opts = {
-			snippets = { preset = "mini_snippets" },
-			-- ensure you have the `snippets` source (enabled by default)
-			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
 			},
 		},
 	},

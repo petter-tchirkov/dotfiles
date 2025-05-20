@@ -42,6 +42,9 @@ return {
 						height = 0.6, -- Specific height for the `find_files` picker
 					},
 				},
+				diagnostics = {
+					theme = "ivy",
+				},
 			},
 			extensions = {
 				-- Add extensions here if needed
