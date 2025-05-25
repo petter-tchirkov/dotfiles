@@ -1,21 +1,19 @@
 {
 	// assistant
 	"edit_predictions": {
-		"mode": "subtle",
-		"copilot": {
-			"proxy": null,
-			"proxy_no_verify": null
-		},
-		"enabled_in_text_threads": false
+		"mode": "subtle"
+	},
+	"features": {
+		"edit_prediction_provider": "none"
 	},
 	"agent": {
 		"default_model": {
 			"provider": "google",
-			"model": "gemini-2.5-pro-preview-05-06"
+			"model": "gemini-2.0-flash"
 		},
 		"single_file_review": true,
 		"model_parameters": [],
-		"always_allow_tool_actions": false,
+		"always_allow_tool_actions": true,
 		"version": "2",
 		"button": false,
 		"commit_message_model": {
@@ -97,6 +95,9 @@
 	"hover_popover_delay": 100,
 	"unstable.ui_density": "compact",
 	"hard_tabs": true,
+	"buffer_font_features": {
+		"calt": false
+	},
 	// ui font
 	"ui_font_size": 16,
 	"ui_font_family": "SpaceMono Nerd Font",
@@ -110,6 +111,12 @@
 		"mode": "system",
 		"light": "Kanagawa",
 		"dark": "One Dark"
+	},
+	"experimental.theme_overrides": {
+		"border": null,
+		"border.variant": "#1f1f28",
+		"editor.line_number": "#54546d",
+		"editor.active_line_number": "#FF9E3B"
 	},
 	// terminal
 	"terminal": {
@@ -136,30 +143,13 @@
 		"diagnostics": false,
 		"metrics": false
 	},
-	"experimental.theme_overrides": {
-		"border": null,
-		"border.variant": "#1f1f28",
-		"editor.line_number": "#54546d",
-		"editor.active_line_number": "#FF9E3B"
-	},
 	"prettier": {
 		"allowed": false
 	},
 	"languages": {
 		"JSONC": {
-			"tab_size": 8,
+			"tab_size": 4,
 			"formatter": "language_server"
-		},
-		"Vue.js": {
-			"formatter": {
-				"external": {
-					"command": "cat << EOF",
-					"arguments": []
-				}
-			},
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			}
 		},
 		"Vue.js": {
 			"formatter": {

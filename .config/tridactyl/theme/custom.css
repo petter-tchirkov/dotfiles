@@ -192,6 +192,14 @@
     background: var(--tridactyl-status-bg) !important;
 }
 
+:root .TridactylHint {
+    color: #16161d !important;
+    background: #ffa066 !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: monospace !important;
+}
+
 /* PRIVATE SESSION STYLING*/
 /* /1* Insert mode *1/ */
 /* :root .TridactylStatusIndicator[class$="TridactylModeinsert"].TridactylPrivate { */

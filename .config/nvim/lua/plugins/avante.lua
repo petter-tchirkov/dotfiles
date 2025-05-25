@@ -18,8 +18,7 @@ return {
 	opts = {
 		provider = "gemini",
 		gemini = {
-			-- @see https://ai.google.dev/gemini-api/docs/models/gemini
-			model = "gemini-2.5-pro-exp-03-25",
+			model = "gemini-2.5-flash-preview-04-17",
 			temperature = 0,
 			max_tokens = 4096,
 		},
