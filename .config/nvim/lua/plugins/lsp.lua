@@ -18,7 +18,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"vtsls",
-					"volar",
+					"vue_ls",
 					"eslint",
 					"tailwindcss",
 					"emmet_language_server",
@@ -29,9 +29,99 @@ return {
 				automatic_installation = false,
 			})
 
+			vim.lsp.config("tailwindcss", {
+				filetypes = {
+					"aspnetcorerazor",
+					"astro",
+					"astro-markdown",
+					"blade",
+					"clojure",
+					"django-html",
+					"htmldjango",
+					"edge",
+					"eelixir",
+					"elixir",
+					"ejs",
+					"erb",
+					"eruby",
+					"gohtml",
+					"gohtmltmpl",
+					"haml",
+					"handlebars",
+					"hbs",
+					"html",
+					"htmlangular",
+					"html-eex",
+					"heex",
+					"jade",
+					"leaf",
+					"liquid",
+					"markdown",
+					"mdx",
+					"mustache",
+					"njk",
+					"nunjucks",
+					"php",
+					"razor",
+					"slim",
+					"twig",
+					"css",
+					"less",
+					"postcss",
+					"sass",
+					"scss",
+					"stylus",
+					"sugarss",
+					"javascript",
+					"javascriptreact",
+					"reason",
+					"rescript",
+					"typescript",
+					"typescriptreact",
+					"vue",
+					"svelte",
+					"templ",
+				},
+				{
+					tailwindCSS = {
+						classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+						includeLanguages = {
+							eelixir = "html-eex",
+							elixir = "phoenix-heex",
+							eruby = "erb",
+							heex = "phoenix-heex",
+							htmlangular = "html",
+							templ = "html",
+						},
+						lint = {
+							cssConflict = "warning",
+							invalidApply = "error",
+							invalidConfigPath = "error",
+							invalidScreen = "error",
+							invalidTailwindDirective = "error",
+							invalidVariant = "error",
+							recommendedVariantOrder = "warning",
+						},
+						validate = true,
+					},
+				},
+			})
+
 			vim.lsp.config("hyprls", {})
+
+			vim.lsp.config("vue_ls", {
+				filetypes = { "vue" },
+			})
+
 			vim.lsp.config("vtsls", {
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+				filetypes = {
+					"javascript",
+					"javascriptreact",
+					"javascript.jsx",
+					"typescript",
+					"typescriptreact",
+					"typescript.tsx",
+				},
 				settings = {
 					vtsls = { tsserver = { globalPlugins = {} } },
 					typescript = {
@@ -57,10 +147,11 @@ return {
 					})
 				end,
 				on_attach = function(client)
-					client.server_capabilities.documentFormattingProvider = false
-					client.server_capabilities.documentRangeFormattingProvider = false
+					client.server_capabilities.documentFormattingProvider = true
+					client.server_capabilities.documentRangeFormattingProvider = true
 				end,
 			})
+
 			vim.lsp.config("emmet_language_server", {
 				on_attach = function(client, bufnr)
 					vim.keymap.set("i", "<c-s>,", function()

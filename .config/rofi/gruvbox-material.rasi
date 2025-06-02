@@ -36,7 +36,7 @@ window {
   location: center;
   anchor: center;
   border-radius: 4px; /* Removed rounded corners */
-  height: 560px;
+  height: 280px;
   width: 600px;
 
   background-color: #2A2A37;
@@ -52,7 +52,7 @@ mainbox {
 
 message {
   padding: 10px;
-  border: 0px 1px 1px 1px;
+  // border: 0px 1px 1px 1px;
   border-color: @gruv0;
   background-color: @transparent;
 }
@@ -63,7 +63,7 @@ inputbar {
   background-color: @transparent;
   border-color: @gruv6;
 
-  border: 1px;
+  // border: 1px;
   border-radius: 0px; /* Removed rounded corners */
 }
 
@@ -79,10 +79,6 @@ prompt {
 }
 
 listview {
-  padding: 8px;
-  border-radius: 0px; /* Removed rounded corners */
-  border: 0px 1px 1px 1px;
-  border-color: @gruv6;
   background-color: @transparent;
   dynamic: false;
 }
@@ -90,10 +86,8 @@ listview {
 element {
   padding: 5px;
   vertical-align: 0.5;
-  border-radius: 0px; /* Removed rounded corners */
   color: @foreground;
-  text-color: @gruv6;
-  background-color: @transparent;
+  text-color: #dcd7ba;
 }
 
 element.normal.active {
@@ -105,7 +99,7 @@ element.normal.urgent {
 }
 
 element.selected.normal {
-  background-color: @gruv7;
+  background-color: #363646;
   text-color: @gruv0;
 }
 
@@ -118,7 +112,7 @@ element.selected.urgent {
 }
 
 element.alternate.normal {
-  background-color: @transparent;
+  // background-color: @transparent;
 }
 
 element-text,
@@ -134,12 +128,12 @@ button {
   color: @foreground;
   horizontal-align: 0.5;
 
-  border: 2px 0px 2px 2px;
+  // border: 2px 0px 2px 2px;
   border-radius: 0px; /* Removed rounded corners */
   border-color: @foreground;
 }
 
 button.selected.normal {
-  border: 2px 0px 2px 2px;
+  // border: 2px 0px 2px 2px;
   border-color: @foreground;
 }

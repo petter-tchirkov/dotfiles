@@ -31,6 +31,11 @@ settings:
     https://draculatheme.com: access-paste
     https://duckduckgo.com: access-paste
     https://github.com: access-paste
+  content.notifications.enabled:
+    https://rozetka.com.ua: false
+    https://www.weblancer.net: false
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: true
   fonts.completion.category:
     global: bold 12px default_family
   fonts.tabs.selected:
@@ -47,9 +52,9 @@ settings:
     global: always
   tabs.padding:
     global:
-      bottom: 6
-      left: 8
-      right: 8
-      top: 6
+      bottom: 1
+      left: 0
+      right: 0
+      top: 1
   tabs.show:
     global: multiple

@@ -23,16 +23,6 @@ set followpagepatterns.prev ^(prev(ious)?|older)\b|«|<<|^上一頁$
 set hintstyles.outline none
 set colorscheme custom
 
-
-" Hint selectors
-" bindurl www.google.com f hint -Jc .rc > div > a
-" bindurl www.google.com F hint -Jbc .rc > div > a
-
-" bindurl ^https://duckduckgo.com f hint -Jc [class=result__a]
-" bindurl ^https://duckduckgo.com F hint -Jbc [class=result__a]
-
-" bindurl www.reddit.com gi hint -Jc .input-container>input
-
 autocmd TabEnter .* unfocus
 
 bind --mode=ex <C-j> ex.next_completion
@@ -41,20 +31,7 @@ bind --mode=ex <C-k> ex.prev_completion
 bind j scrollline 3
 bind k scrollline -3
 
-bindurl youtube.com f hint -Jc #video-title-link
-bindurl youtube.com F hint -Jcb #video-title-link
-bindurl youtube.com q hint -Jcqb #video-title-link
-bindurl reddit.com f hint -c [class*="expand"]
-bindurl reddit.com F hint -bc [class*="bylink"]
-" bindurl youtube.com/watch? f hint -Jc #thumbnail
-" bindurl youtube.com/watch? F hint -Jcb #thumbnail
-" bindurl youtube.com/watch? q hint -Jcb #thumbnail
-bindurl https://www.youtube.com/results? f hint -c #thumbnail
-bindurl https://www.youtube.com/results? F hint -cb #thumbnail
-bindurl https://www.youtube.com/results? q hint -cqb #thumbnail
-bindurl https://www.youtube.com/playlist? f hint -Jc #video-title
-bindurl https://www.youtube.com/playlist? F hint -Jbc #video-title
-bindurl https://www.youtube.com/playlist? q hint -Jqbc #video-title
+bind O fillcmdline tabopen
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl

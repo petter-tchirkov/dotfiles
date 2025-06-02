@@ -3,7 +3,8 @@ return {
 	config = function()
 		require("minuet").setup({
 			-- Your configuration options here
-			provider = "gemini",
+			provider = "openai_fim_compatible",
+			context_window = 512,
 			n_completions = 1,
 			provider_options = {
 				gemini = {
@@ -20,7 +21,7 @@ return {
 					api_key = "TERM",
 					name = "Ollama",
 					end_point = "http://localhost:11434/v1/completions",
-					model = "qwen2.5-coder:3b-instruct-q4_K_M",
+					model = "qwen2.5-coder:7b",
 					optional = {
 						max_tokens = 56,
 						top_p = 0.9,
@@ -30,9 +31,9 @@ return {
 			virtualtext = {
 				keymap = {
 					-- accept whole completion
-					accept = "<A-A>",
+					accept = "<A-f>",
 					-- accept one line
-					accept_line = "<A-a>",
+					accept_line = "<C-f>",
 					-- accept n lines (prompts for number)
 					-- e.g. "A-z 2 CR" will accept 2 lines
 					accept_n_lines = "<A-z>",
@@ -43,7 +44,7 @@ return {
 					dismiss = "<A-e>",
 				},
 				auto_trigger_ft = { "lua", "vue", "typescript" },
-				show_on_completion_menu = true,
+				show_on_completion_menu = false,
 			},
 		})
 	end,

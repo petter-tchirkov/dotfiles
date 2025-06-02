@@ -15,12 +15,17 @@ return {
 		},
 	},
 	build = "make",
+	event = "VeryLazy",
 	opts = {
 		provider = "gemini",
-		gemini = {
-			model = "gemini-2.5-flash-preview-04-17",
-			temperature = 0,
-			max_tokens = 4096,
+		providers = {
+			gemini = {
+				model = "gemini-2.5-flash-preview-04-17",
+				extra_request_body = {
+					temperature = 0,
+					max_completion_tokens = 4096,
+				},
+			},
 		},
 	},
 }
