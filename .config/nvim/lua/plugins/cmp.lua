@@ -20,6 +20,9 @@ return {
 				documentation = {
 					auto_show = true,
 				},
+				border = nil,
+				scrolloff = 1,
+				scrollbar = false,
 				menu = {
 					draw = {
 						components = {
@@ -62,26 +65,16 @@ return {
 			snippets = { preset = "luasnip" },
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
+				providers = {
+					cmdline = {
+						min_keyword_length = 2,
+					},
+				},
 			},
 		},
 		opts_extend = {
 			"sources.default",
 			"sources.completion.enabled_providers",
-		},
-	},
-	{
-		"saghen/blink.cmp",
-		opts = {
-			sources = {
-				default = { "lazydev" },
-				providers = {
-					lazydev = {
-						name = "LazyDev",
-						module = "lazydev.integrations.blink",
-						score_offset = 100, -- show at a higher priority than lsp
-					},
-				},
-			},
 		},
 	},
 }

@@ -22,7 +22,7 @@ alias al='la'            # I often screw this up.
 alias colormap='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
 
 alias nvimrc='nvim ~/.config/nvim/'
-alias dt='cd ~/dotfiles'
+alias dt='nvim ~/dotfiles'
 alias grep='grep --color=auto'
 alias l='lazygit'
 
