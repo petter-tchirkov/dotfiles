@@ -109,9 +109,9 @@ return {
 
 			vim.lsp.config("hyprls", {})
 
-			vim.lsp.config("vue_ls", {
-				filetypes = { "vue" },
-			})
+			-- vim.lsp.config("vue_ls", {
+			-- 	filetypes = { "vue" },
+			-- })
 
 			vim.lsp.config("vtsls", {
 				filetypes = {
@@ -121,6 +121,7 @@ return {
 					"typescript",
 					"typescriptreact",
 					"typescript.tsx",
+					"vue",
 				},
 				settings = {
 					vtsls = { tsserver = { globalPlugins = {} } },

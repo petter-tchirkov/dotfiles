@@ -1,31 +1,31 @@
 return {
-	"yetone/avante.nvim",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-		"stevearc/dressing.nvim",
-		"nvim-lua/plenary.nvim",
-		"MunifTanjim/nui.nvim",
-		{
-			"MeanderingProgrammer/render-markdown.nvim",
-			opts = {
-				file_types = { "markdown", "Avante" },
-				latext = { enabled = false },
-			},
-			ft = { "markdown", "Avante" },
-		},
-	},
-	build = "make",
-	event = "VeryLazy",
-	opts = {
-		provider = "gemini",
-		providers = {
-			gemini = {
-				model = "gemini-2.5-flash-preview-04-17",
-				extra_request_body = {
-					temperature = 0,
-					max_completion_tokens = 4096,
-				},
-			},
-		},
-	},
+	-- "yetone/avante.nvim",
+	-- dependencies = {
+	-- 	"nvim-tree/nvim-web-devicons",
+	-- 	"stevearc/dressing.nvim",
+	-- 	"nvim-lua/plenary.nvim",
+	-- 	"MunifTanjim/nui.nvim",
+	-- 	{
+	-- 		"MeanderingProgrammer/render-markdown.nvim",
+	-- 		opts = {
+	-- 			file_types = { "markdown", "Avante" },
+	-- 			latext = { enabled = false },
+	-- 		},
+	-- 		ft = { "markdown", "Avante" },
+	-- 	},
+	-- },
+	-- build = "make",
+	-- event = "VeryLazy",
+	-- opts = {
+	-- 	provider = "gemini",
+	-- 	providers = {
+	-- 		gemini = {
+	-- 			model = "gemini-2.5-flash-preview-04-17",
+	-- 			extra_request_body = {
+	-- 				temperature = 0,
+	-- 				max_completion_tokens = 4096,
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
 }
