@@ -1,0 +1,201 @@
+{
+	// Window & updates
+	"auto_update_extensions": {
+		"vue": false
+	},
+	"window_decorations": "server",
+	"use_system_window_tabs": false,
+	"auto_update": false,
+	"bottom_dock_layout": "right_aligned",
+	// Editing behavior
+	"ensure_final_newline_on_save": false,
+	"remove_trailing_whitespace_on_save": false,
+	"format_on_save": "off",
+	"hard_tabs": true,
+	"lsp_highlight_debounce": 100,
+	"lsp_document_colors": "background",
+	"hover_popover_delay": 100,
+	"vertical_scroll_margin": 15,
+	"buffer_line_height": "standard",
+	"edit_predictions": {
+		"mode": "subtle"
+	},
+	"show_edit_predictions": false,
+	"prettier": {
+		"allowed": false
+	},
+	// Cursors, lines & keymap
+	"cursor_blink": false,
+	"base_keymap": "VSCode",
+	"vim_mode": true,
+	"vim": {
+		"use_smartcase_find": true,
+		"toggle_relative_line_numbers": true
+	},
+	"relative_line_numbers": "enabled",
+	// Layout & chrome
+	"centered_layout": {
+		"left_padding": 0.05,
+		"right_padding": 0.05
+	},
+	"title_bar": {
+		"show_branch_icon": true, // Show/hide branch icon beside branch switcher
+		"show_branch_name": true, // Show/hide branch name
+		"show_project_items": true, // Show/hide project host and name
+		"show_onboarding_banner": false, // Show/hide onboarding banners
+		"show_user_picture": true, // Show/hide user avatar
+		"show_sign_in": true, // Show/hide sign-in button
+		"show_menus": false // Show/hide menus
+	},
+	"scrollbar": {
+		"show": "never"
+	},
+	"tab_bar": {
+		"show_nav_history_buttons": false,
+		"show_tab_bar_buttons": true
+	},
+	"tabs": {
+		"git_status": true,
+		"show_diagnostics": "all",
+		"file_icons": true
+	},
+	"gutter": {
+		"folds": false,
+		"breakpoints": false,
+		"runnables": false
+	},
+	"toolbar": {
+		"code_actions": true,
+		"breadcrumbs": true,
+		"quick_actions": true,
+		"agent_review": true,
+		"selections_menu": true
+	},
+	"indent_guides": {
+		"enabled": false
+	},
+	"active_pane_modifiers": {
+		"border_size": 0
+	},
+	"show_call_status_icon": true,
+	"unstable.ui_density": "compact",
+	// Panels & navigation
+	"file_finder": {
+		"modal_max_width": "xlarge"
+	},
+	"project_panel": {
+		"dock": "right",
+		"indent_size": 30,
+		"button": false
+	},
+	"notification_panel": {
+		"button": false
+	},
+	"collaboration_panel": {
+		"button": false
+	},
+	"outline_panel": {
+		"button": false
+	},
+	"git_panel": {
+		"button": false
+	},
+	"search": {
+		"button": false
+	},
+	// Fonts & theme
+	"icon_theme": "Colored Zed Icons Theme Light",
+	"ui_font_family": "Monaspace Argon NF",
+	"ui_font_size": 15.0,
+	"ui_font_weight": 600.0,
+	"buffer_font_family": "Monaspace Argon NF",
+	"buffer_font_size": 14.0,
+	"buffer_font_weight": 400,
+	"buffer_font_features": {
+		"calt": true,
+		"cv01": 7
+	},
+	"theme": "Gruvbox Material",
+	// Terminal
+	"terminal": {
+		"font_family": "Monaspace Argon NF",
+		"font_size": 16,
+		"default_height": 9999,
+		"line_height": {
+			"custom": 1.5
+		},
+		"button": false
+	},
+	// Diagnostics & git
+	"diagnostics": {
+		"lsp_pull_diagnostics": {
+			"debounce_ms": 0
+		},
+		"inline": {
+			"min_column": 1,
+			"enabled": true,
+			"max_severity": null // same values as the `diagnostics_max_severity` from the editor settings
+		}
+	},
+	"git": {
+		"git_gutter": "hide",
+		"inline_blame": {
+			"enabled": false
+		}
+	},
+	// Assistant
+	"agent": {
+		"use_modifier_to_send": true,
+		"play_sound_when_agent_done": true,
+		"default_profile": "ask"
+	},
+	"agent_servers": {
+		"gemini": {
+			"ignore_system_version": true
+		}
+	},
+	// Language-specific overrides
+	"languages": {
+		"TypeScript": {
+			"language_servers": ["vtsls"],
+			"indent_guides": {
+				"coloring": "indent_aware"
+			},
+			"code_actions_on_format": {
+				"source.fixAll.eslint": true,
+				"source.addMissingImports.ts": true
+			},
+			"formatter": []
+		},
+		"Vue.js": {
+			"code_actions_on_format": {
+				"source.fixAll.eslint": true
+			},
+			"formatter": []
+		},
+		"JSONC": {
+			"tab_size": 4,
+			"formatter": "language_server"
+		}
+	},
+	// LSP
+	"lsp": {
+		"vtsls": {
+			"settings": {
+				"tsserver": {
+					"maxTsServerMemory": 8092
+				}
+			},
+			"initialization_options": {
+				"preferences": {
+					"importModuleSpecifier": "absolute"
+				}
+			}
+		}
+	},
+	// Privacy
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	}
+}

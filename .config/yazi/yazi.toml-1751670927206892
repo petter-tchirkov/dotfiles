@@ -1,0 +1,14 @@
+[manager]
+show_hidden = true
+linemode = "size"
+
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+]
+
+[preview]
+max_width = 1000
+tab_size = 2
+

@@ -1,0 +1,25 @@
+[mgr]
+show_hidden = true
+linemode = "size"
+sort_by = "natural"
+
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+]
+open = [
+    # Image files
+    { run = 'swayimg "$@"', desc = "Open with swayimg", for = "linux", mime = "image/*" },
+#   # Zip/Rar
+    { run = 'unzip -j "$@"', desc = "Unzip", for = "linux", mime = "application/zip" },
+    { run = 'unrar e -j "$@"', desc = "Unrar", for = "linux", mime = "application/rar" },
+
+    # Fallback for other file types
+    { run = 'xdg-open "$@"', desc = "Open with default application", for = "linux" },
+]
+
+[preview]
+max_width = 2000
+max_height = 2000
+tab_size = 4
