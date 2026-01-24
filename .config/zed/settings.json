@@ -41,18 +41,19 @@
 	"title_bar": {
 		"show_branch_icon": true, // Show/hide branch icon beside branch switcher
 		"show_branch_name": true, // Show/hide branch name
-		"show_project_items": true, // Show/hide project host and name
+		"show_project_items": false, // Show/hide project host and name
 		"show_onboarding_banner": false, // Show/hide onboarding banners
 		"show_user_picture": true, // Show/hide user avatar
 		"show_sign_in": true, // Show/hide sign-in button
-		"show_menus": false // Show/hide menus
+		"show_menus": false, // Show/hide menus
+		"show_user_menu": true,
 	},
 	"scrollbar": {
 		"show": "never"
 	},
 	"tab_bar": {
 		"show_nav_history_buttons": false,
-		"show_tab_bar_buttons": true
+		"show_tab_bar_buttons": false
 	},
 	"tabs": {
 		"git_status": true,
@@ -65,12 +66,15 @@
 		"runnables": false
 	},
 	"toolbar": {
-		"code_actions": true,
-		"breadcrumbs": true,
-		"quick_actions": true,
-		"agent_review": true,
-		"selections_menu": true
+		"code_actions": false,
+		"breadcrumbs": false,
+		"quick_actions": false,
+		"agent_review": false,
+		"selections_menu": false
 	},
+	// "status_bar": {
+	// 	"experimental.show": false
+	// },
 	"indent_guides": {
 		"enabled": false
 	},
@@ -105,10 +109,10 @@
 	},
 	// Fonts & theme
 	"icon_theme": "Colored Zed Icons Theme Light",
-	"ui_font_family": "Monaspace Argon NF",
+	"ui_font_family": "SpaceMono Nerd Font Mono",
 	"ui_font_size": 15.0,
-	"ui_font_weight": 600.0,
-	"buffer_font_family": "Monaspace Argon NF",
+	"ui_font_weight": 400.0,
+	"buffer_font_family": "SpaceMono Nerd Font Mono",
 	"buffer_font_size": 14.0,
 	"buffer_font_weight": 400,
 	"buffer_font_features": {
@@ -116,9 +120,14 @@
 		"cv01": 7
 	},
 	"theme": "Gruvbox Material",
+	"theme_overrides": {
+		"Gruvbox Material": {
+			"border": "#292828"
+		}
+	},
 	// Terminal
 	"terminal": {
-		"font_family": "Monaspace Argon NF",
+		"font_family": "SpaceMono Nerd Font Mono",
 		"font_size": 16,
 		"default_height": 9999,
 		"line_height": {
@@ -157,7 +166,9 @@
 	// Language-specific overrides
 	"languages": {
 		"TypeScript": {
-			"language_servers": ["vtsls"],
+			"language_servers": [
+				"vtsls"
+			],
 			"indent_guides": {
 				"coloring": "indent_aware"
 			},

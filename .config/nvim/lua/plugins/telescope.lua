@@ -93,7 +93,7 @@ return {
 end
 
 		-- Keybindings for common pickers
-		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
+		-- vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
 		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Find Diagnostics" })
 		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })

@@ -1,0 +1,66 @@
+:root {
+	--tab-height: 16px;
+	--tab-fz: 12px;
+	--bg0-hard: #1d2021;
+	--bg0-soft: #32302f;
+	--bg0-normal: #2e3436;
+	--bg0: var(--bg0-normal);
+	--bg1: #010101;
+	--bg2: #504945;
+	--bg3: #665c54;
+	--bg4: #7c6f64;
+	--fg0: #fafafa;
+	--fg1: #f6f6f6;
+	--fg2: #d5c4a1;
+	--fg3: #bdae93;
+	--fg4: #a89984;
+	--bright-red: #fb4934;
+	--bright-green: #b8bb26;
+	--bright-yellow: #fabd2f;
+	--bright-blue: #83a598;
+	--bright-purple: #d3869b;
+	--bright-aqua: #8ec07c;
+	--bright-gray: #928374;
+	--bright-orange: #fe8019;
+	--dark-red: #cc241d;
+	--dark-green: #98971a;
+	--dark-yellow: #d79921;
+	--dark-blue: #458588;
+	--dark-purple: #b16286;
+	--dark-aqua: #689d6a;
+	--dark-gray: #a89984;
+	--dark-orange: #d65d0e;
+}
+
+
+.tabs-top #tabs-tabbar-container .toolbar-tabbar-before:empty, .tabs-top #tabs-tabbar-container .toolbar-tabbar-after:empty, .tabs-bottom #tabs-tabbar-container .toolbar-tabbar-before:empty, .tabs-bottom #tabs-tabbar-container .toolbar-tabbar-after:empty {
+	display: none;
+}
+
+/* tab-bar height*/
+#header,
+#tabs-tabbar-container.top,
+#tabs-container .resize .tab-strip,
+#tabs-container .resize .tab-position,
+#tabs-container .resize .toolbar-tabbar,
+.tab .tab-header,
+.linux .tab .title
+{
+	--Height: var(--tab-height) !important;
+	height: var(--tab-height) !important;
+}
+
+.tab .tab-header {
+	flex: 0 0 100%;
+}
+
+.linux .tab .title {
+	height: var(--Height);
+	line-height: var(--Height);
+}
+
+.tab-strip {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}

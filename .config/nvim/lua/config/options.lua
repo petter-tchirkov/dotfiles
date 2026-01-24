@@ -138,4 +138,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
 
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
-vim.o.winborder = 'solid'
+vim.o.winborder = "solid"

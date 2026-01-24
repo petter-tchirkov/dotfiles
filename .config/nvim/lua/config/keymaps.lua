@@ -7,7 +7,8 @@ keymap("n", "<c-j>", ":wincmd j<CR>")
 keymap("n", "<c-h>", ":wincmd h<CR>")
 keymap("n", "<c-l>", ":wincmd l<CR>")
 keymap("n", "<leader>w", ":write<CR>")
-keymap("n", "<leader>x", ":bd<CR>")
+keymap("n", "<leader>x", ":bdelete<CR>")
+keymap("n", "<c-w>", ":bdelete<CR>")
 
 -- Create a vertical split
 keymap("n", "<leader>sv", ":vs<CR>")
@@ -19,6 +20,14 @@ vim.wo.relativenumber = true
 -- Keep visual mode indenting
 keymap("v", "<", "<gv", silent)
 keymap("v", ">", ">gv", silent)
+
+-- Quick line navigation
+keymap("n", "gh", "^", silent)
+keymap("n", "gl", "$", silent)
+keymap("v", "gh", "^", silent)
+keymap("v", "gl", "$", silent)
+-- keymap("o", "gh", "^", silent)
+-- keymap("o", "gl", "$", silent)
 
 -- Don't yank on delete char
 keymap("n", "x", '"_x', silent)
@@ -64,5 +73,5 @@ vim.keymap.set("n", "q", "<cmd>q<CR>")
 
 vim.keymap.set("n", "<leader>lf", "<cmd>LspEslintFixAll<CR>")
 
-vim.keymap.set('n', 'H', '<cmd>BufferLineCyclePrev<CR>')
-vim.keymap.set('n', 'L', '<cmd>BufferLineCycleNext<CR>')
+vim.keymap.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "L", "<cmd>BufferLineCycleNext<CR>")

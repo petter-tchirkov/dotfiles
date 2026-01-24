@@ -1,7 +1,51 @@
+:root {
+	--tab-height: 16px;
+	--tab-fz: 12px;
+	--bg0-hard: #1d2021;
+	--bg0-soft: #32302f;
+	--bg0-normal: #2e3436;
+	--bg0: var(--bg0-normal);
+	--bg1: #010101;
+	--bg2: #504945;
+	--bg3: #665c54;
+	--bg4: #7c6f64;
+	--fg0: #fafafa;
+	--fg1: #f6f6f6;
+	--fg2: #d5c4a1;
+	--fg3: #bdae93;
+	--fg4: #a89984;
+	--bright-red: #fb4934;
+	--bright-green: #b8bb26;
+	--bright-yellow: #fabd2f;
+	--bright-blue: #83a598;
+	--bright-purple: #d3869b;
+	--bright-aqua: #8ec07c;
+	--bright-gray: #928374;
+	--bright-orange: #fe8019;
+	--dark-red: #cc241d;
+	--dark-green: #98971a;
+	--dark-yellow: #d79921;
+	--dark-blue: #458588;
+	--dark-purple: #b16286;
+	--dark-aqua: #689d6a;
+	--dark-gray: #a89984;
+	--dark-orange: #d65d0e;
+}
+
+#tabs-tabbar-container {
+    --Height: var(--tab-height) !important;
+    --tab-height: 16px;
+    --tab-fz: 12px;
+}
+
+.tabs-top #tabs-tabbar-container .toolbar-tabbar-before:empty, .tabs-top #tabs-tabbar-container .toolbar-tabbar-after:empty, .tabs-bottom #tabs-tabbar-container .toolbar-tabbar-before:empty, .tabs-bottom #tabs-tabbar-container .toolbar-tabbar-after:empty {
+	display: none;
+}
+
 /* Address Bar Tweaks */
 .UrlBar-AddressField {
-    height: 20px !important;
-    width: 34vw !important;
+    height: var(--tab-height) !important;
+    /* width: 34vw !important; */
     margin-top: 0px !important;
     background-color: var(--colorBg) !important;
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out, margin-top 0.2s ease-in-out, right 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
@@ -9,7 +53,7 @@
 
 
 .UrlBar-AddressField&:focus-within {
-    height: 20px !important;
+    height: var(--tab-height) !important;
     margin-top: 0px !important;
     background-color: var(--colorBg) !important;
     outline: none !important;
@@ -18,6 +62,15 @@
 
 .UrlBar-SearchField, .UrlBar-AddressField {
     margin: 0 !important;
+}
+
+.UrlBar-UrlField #urlFieldInput {
+    font-size: var(--tab-fz) !important;
+    font-family: 'SpaceMono Nerd Font', sans-serif !important;
+}
+
+#browser.linux, #browser.linux button, #browser.linux input, #browser.linux select, #browser.linux textarea {
+    font-family: 'SpaceMono Nerd Font', sans-serif !important;
 }
 
 .tab .close {
@@ -30,6 +83,7 @@
 
 .color-behind-tabs-off .SearchField, .color-behind-tabs-off .MailSearchField-Inner, .color-behind-tabs-off .UrlBar-AddressField {
     border: none !important;
+    outline: none !important;
 }
 
 .transparent-tabbar .tab-position .tab.active .tab-header .favicon:not(.svg),
@@ -45,54 +99,64 @@
 
 /* Slimmer Tabs/Title Bar */
 .tabs-top.tabs-at-edge#browser.linux:not(.fullscreen, .disable-titlebar) #header {
-    min-height: calc((20px + var(--densityGap) * 2) / var(--uiZoomLevel)) !important;
+    min-height: calc((var(--tab-height) + var(--densityGap) * 2) / var(--uiZoomLevel)) !important;
 }
 
 #titlebar {
-height: 20px !important;
+height: var(--tab-height) !important;
 }
 
 #tabbar-wrapper {
-    height: 20px !important;
+    height: var(--tab-height) !important;
 }
 
 #tabs-container.top {
     padding-left: 0 !important;
-    min-height: 20px !important;
+    min-height: var(--tab-height) !important;
 }
 
 #tabs-tabbar-container.top {
-height: 20px !important;
+height: var(--tab-height) !important;
 padding-top: 0 !important;
 padding-bottom: 0 !important;
 }
 
 #browser.linux .button-toolbar:not(.panel-clickoutside-ignore) {
-    height: 20px !important;
+    display: none;
+    height: var(--tab-height) !important;
+}
+
+#browser.linux .toolbar-extensions {
+    min-width: 0;
+}
+
+#browser.linux .toolbar-extensions .button-toolbar,
+.button-toolbar.ExtensionDropdownIcon.extensionId{
+    display: flex;
 }
 
 #browser.linux .button-toolbar button {
-max-width: 20px !important;
+max-width: var(--tab-height) !important;
 }
 
 .tabs-top:not(.density-on) #tabs-tabbar-container:not(:has(#tabs-subcontainer)) #tabs-container .tab {
-    height: 20px !important;
+    height: var(--tab-height) !important;
 }
 
 .button-toolbar > button {
     border-radius: 6px !important;
-    height: 20px !important;
+    height: var(--tab-height) !important;
     min-width: 16px !important;
 }
 
 .toolbar-large .button-toolbar .button-icon:not(.favicon) {
-    width: 20px !important;
-    height: 20px !important;
+    width: var(--tab-height) !important;
+    height: var(--tab-height) !important;
 }
 
 .vivaldi {
     width: 22px !important;
-    height: 20px !important;
+    height: var(--tab-height) !important;
 }
 
 /* .tabs-top #tabs-tabbar-container .toolbar-tabbar-before { */
@@ -100,7 +164,7 @@ max-width: 20px !important;
 /* } */
 
 .tab .tab-header {
-    flex: 0 0 20px;
+    flex: 0 0 var(--tab-height);
 }
 
 /* .tabs-top #tabs-tabbar-container .toolbar-tabbar-after { */
@@ -124,7 +188,7 @@ max-width: 20px !important;
 }
 
 .tabs-top#browser.linux:not(.fullscreen, .disable-titlebar) #header {
-    min-height: calc((20px + var(--densityGap) * 2) / var(--uiZoomLevel));
+    min-height: calc((var(--tab-height) + var(--densityGap) * 2) / var(--uiZoomLevel));
 }
 
 .tabs-top .vivaldi {
@@ -136,21 +200,20 @@ max-width: 20px !important;
     height: 16px !important; 
 }
 
-.tab-position {
-    --Height: 20px !important;
-}
 
 .linux .tab .title {
-    height: 20px !important;
-    line-height: 20px !important;
+    height: var(--tab-height) !important;
+    line-height: var(--tab-height) !important;
+    font-size: var(--tab-fz);
+    line-height: 1;
 }
 
-.tab .favicon {
-    min-width: 16px !important;
-    width: 16px !important;
-    min-height: 16px !important;
-    height: 16px !important;
-}
+/* .tab .favicon { */
+/*     min-width: 16px !important; */
+/*     width: 16px !important; */
+/*     min-height: 16px !important; */
+/*     height: 16px !important; */
+/* } */
 
 .tabs-top:not(.tabs-at-edge, .density-on) #tabs-tabbar-container #tabs-container {
     padding-bottom: 0 !important;
@@ -162,6 +225,7 @@ max-width: 20px !important;
 
 .tabs-top #tabs-container .resize, .tabs-bottom #tabs-container .resize {
     margin-right: 0 !important;
+    max-width: 100% !important;
 }
 
 .toolbar-tabbar-after {
@@ -179,4 +243,27 @@ max-width: 20px !important;
 
 #tabs-container .tab-audio {
     top: 0 !important;
+}
+
+#browser:not(.address-top.mail-bar-top) > #header {
+    box-shadow: none !important;
+}
+
+.mainbar {
+    border: none !important;
+}
+
+#browser.color-behind-tabs-on .tab:nth-child(odd) {
+    background-color: var(--bg2);
+    color: var(--fg2);
+}
+
+#browser.color-behind-tabs-on .tab:nth-child(even) {
+    background-color: var(--bg3);
+    color: var(--fg2);
+}
+
+#browser.color-behind-tabs-on .tab.active.active {
+    background-color: var(--bg0-hard);
+    color: var(--fg2);
 }
