@@ -10,7 +10,7 @@ edit = [
 ]
 open = [
     # Image files
-    { run = 'swayimg "$@"', desc = "Open with swayimg", for = "linux", mime = "image/*" },
+    { run = 'mpv --config-dir=/home/theonlyvoivod/.config/mvi/ "$@"', desc = "Open with MPV", for = "linux", mime = "image/*" },
 #   # Zip/Rar
     { run = 'unzip -j "$@"', desc = "Unzip", for = "linux", mime = "application/zip" },
     { run = 'unrar e -j "$@"', desc = "Unrar", for = "linux", mime = "application/rar" },

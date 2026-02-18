@@ -41,6 +41,7 @@ bindkey '^N' down-line-or-search
 export MANPAGER="nvim +Man!"
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
+export QT_QPA_PLATFORMTHEME="gtk2"
 
 ### History configuration
 HISTSIZE=10000
@@ -70,6 +71,13 @@ alias vim='nvim'
 alias c='clear'
 alias grep='grep --color=auto'
 alias l='lazygit'
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+alias galdl="gallery-dl --limit-rate 10M --cookies ~/Downloads/cookies.txt"
+alias kr="keyd reload"
+alias km="keyd monitor"
+alias ld="lazydocker"
+alias mvi="mpv --config-dir=$HOME/.config/mvi"
 
 ### CWD for Yazi
 function d() {

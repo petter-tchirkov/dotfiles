@@ -121,9 +121,9 @@
 	},
 	"theme": "Gruvbox Material",
 	"theme_overrides": {
-		"Gruvbox Material": {
-			"border": "#292828"
-		}
+		// "Gruvbox Material": {
+		// 	"border": "#292828"
+		// }
 	},
 	// Terminal
 	"terminal": {
