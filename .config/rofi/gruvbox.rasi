@@ -1,12 +1,8 @@
-/**
- * Gruvbox Material (Medium) theme
- * Taken from: https://user-images.githubusercontent.com/58662350/213884019-cbcd5f00-5bef-4a37-9139-0570770330b6.png
- * Repository: https://github.com/hiimsergey/rofi-gruvbox-material
- */
-
 * {
-    bg0: #282828;
-    bg1: #32302f;
+    font:   "SauceCodePro Nerd Font Medium 12";
+
+    bg0: #1d2021;
+    bg1: #282828;
     grey0: #7c6f64;
     fg0: #d4be98;
 
@@ -17,98 +13,94 @@
     bgStatusline3: #504945;
 
     background-color: @bg0;
+
+    accent-color:     #d8a657;
+    urgent-color:     #ea6962;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    active-fg: #444444;
+    active-bg: #d4be98;
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
 }
 
 window {
-    height: 600;
-    width: 600;
+    location:   center;
+    width:      480;
 
-    border: 1;
-    border-radius: 10;
-    border-color: @bgStatusline3;
-}
-
-mainbox {
-    spacing: 0;
-    children: [inputbar, message, listview];
+    background-color:   @bg0;
 }
 
 inputbar {
-    color: @fg0;
-    padding: 14;
-    background-color: @bg0;
+    spacing:    8px;
+    padding:    8px;
+
+    background-color:   @bg1;
 }
 
-message {
-    padding: 10;
-    background-color: @grey0;
-}
-
-listview {
-    padding: 8;
-    border-radius: 0 0 10 10;
-    border: 2 2 2 2;
-    border-color: @bg0;
-    background-color: @bg0;
-    dynamic: false;
-}
-
-textbox {
-    text-color: @fg0;
-    background-color: inherit;
-}
-
-error-message {
-    border: 20 20 20 20;
-}
-
-entry, prompt, case-indicator {
-    text-color: inherit;
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
 }
 
 prompt {
-    margin: 0 10 0 0;
+    text-color: @accent-color;
+}
+
+textbox {
+    padding:            8px;
+    background-color:   @bg1;
+}
+
+listview {
+    padding:    4px 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height:   false;
 }
 
 element {
-    padding: 5;
-    vertical-align: 0.5;
-    border-radius: 10;
-    background-color: @bg1;
+    padding:    8px;
+    spacing:    8px;
 }
 
-element.selected.normal {
-    background-color: @grey0;
-}
-
-element.alternate.normal {
-    background-color: inherit;
-}
-
-element.normal.active, element.alternate.active {
-    background-color: @orange;
-}
-
-element.selected.active {
-    background-color: @green;
-}
-
-element.normal.urgent, element.alternate.urgent {
-    background-color: @red;
-}
-
-element.selected.urgent {
-    background-color: @blue;
-}
-
-element-text, element-icon {
-    size: 40;
-    margin: 0 10 0 0;
-    vertical-align: 0.5;
-    background-color: inherit;
+element normal normal {
     text-color: @fg0;
 }
 
-element-text .active, element-text .urgent {
+element normal urgent {
+    text-color: @urgent-color;
+}
+
+element normal active {
+    text-color: @accent-color;
+}
+
+element alternate active {
+    text-color: @accent-color;
+}
+
+element selected {
     text-color: @bg0;
+}
+
+element selected normal, element selected active {
+    background-color:   @active-bg;
+    text-color: @active-fg;
+}
+
+element selected urgent {
+    background-color:   @urgent-color;
+}
+
+element-icon {
+    size:   0.8em;
+}
+
+element-text {
+    text-color: inherit;
 }

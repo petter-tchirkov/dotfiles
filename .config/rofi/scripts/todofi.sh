@@ -16,11 +16,11 @@ LINES_MODE="auto"
 LINES_MIN=1
 LINES_MAX=15
 
-COLOR_TITLE="#00CC00"
-COLOR_SHORTCUT="#0000CC"
-COLOR_INFO="#FF0000"
-COLOR_EXAMPLE="#0000CC"
-COLOR_ITEM="#0000FF"
+COLOR_TITLE="#a9b665"
+COLOR_SHORTCUT="#89b482"
+COLOR_INFO="#ea6962"
+COLOR_EXAMPLE="#89b482"
+COLOR_ITEM="#7daea3"
 
 # Don't forget to quote regex char
 MARKUP_PRIORITY='<b>\1<\/b> \2'
@@ -38,7 +38,7 @@ SHORTCUT_FILTERS="Alt+p"
 SHORTCUT_CLEAR="Alt+c"
 SHORTCUT_HELP="Alt+h"
 
-EDITOR='gedit'
+EDITOR='nvim'
 
 ROFI_BIN="$(command -v rofi)"
 TODO_BIN=$(command -v todo-txt || command -v todo.sh)

@@ -1,0 +1,79 @@
+:root {
+  --height: 24px;
+}
+
+.mainbar {
+  padding: 0 !important;
+  border-top-width: 0 !important;
+
+  .toolbar-mainbar {
+    padding: 0 !important;
+
+    .UrlBar-AddressField {
+      height: var(--height) !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+
+      .toolbar-insideinput {
+        display: none !important;
+      }
+
+      .UrlFragments {
+        height: var(--height) !important;
+        padding: 0 !important;
+      }
+
+      .UrlField {
+        padding-left: 4px !important;
+
+        .OmniDropdown {
+            padding-bottom: 24px !important;
+        }
+
+        .UrlFieldInput {
+          text-align: center;
+        }
+
+        .UrlFragment-Wrapper {
+          padding: 0 !important;
+          line-height: var(--height) !important;
+          height: var(--height) !important;
+          width: 100% !important;
+
+          .UrlFragment--Highlight {
+            line-height: var(--height) !important;
+            width: 100% !important;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .UrlBar-AddressField:focus-within {
+        border: none !important;
+    }
+
+    .toolbar-extensions {
+      min-width: var(--height) !important;
+
+      button.ToolbarButton-Button {
+        height: var(--height) !important;
+        min-width: var(--height) !important;
+        background-color: var(--bg_dim) !important;
+
+        .button-icon {
+          width: var(--height) !important;
+          height: var(--height) !important;
+        }
+
+        svg {
+          width: var(--height) !important;
+          height: var(--height) !important;
+          fill: var(--bg_dim) !important;
+          color: var(--fg0) !important;
+        }
+      }
+    }
+  }
+}

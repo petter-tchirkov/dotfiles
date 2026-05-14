@@ -20,15 +20,15 @@ return {
 		},
 	},
 	{ "windwp/nvim-ts-autotag", opts = {} },
+
 	{
 		"kylechui/nvim-surround",
 		version = "*",
 		event = "VeryLazy",
-		opts = {
-			keymaps = {
-				normal = "gs",
-				normal_cur = "gss",
-			},
-		},
+		opts = {},
 	},
+
+	vim.keymap.set("n", "gs", "<Plug>(nvim-surround-normal)", {
+		desc = "Add a surrounding pair around a motion (normal mode)",
+	}),
 }

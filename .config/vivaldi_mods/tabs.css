@@ -1,0 +1,104 @@
+* {
+  border-radius: 0 !important;
+}
+
+#app {
+  line-height: var(--tab-height) !important;
+
+  #browser.linux {
+    font-family: var(--font-family) !important;
+    font-size: var(--font-size) !important;
+
+        #tabs-tabbar-container.none {
+            display: none;
+        }
+
+    #tabs-tabbar-container {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      background-color: var(--bg_dim) !important;
+      height: var(--tab-height) !important;
+
+      #tabs-container {
+        min-height: var(--tab-height) !important;
+
+        .vivaldi {
+          display: none !important;
+        }
+
+        .toolbar-droptarget {
+          display: none !important;
+        }
+
+        .resize {
+          margin-right: 0 !important;
+
+          .tab-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) !important;
+
+            .tab-position {
+              --Height: var(--tab-height) !important;
+              transform: translate(0) !important;
+              position: relative !important;
+              border-left: 1px solid var(--inactive-bg);
+              border-right: 1px solid var(--inactive-bg);
+
+              :has(.tab.active) {
+                border-left: 3px solid var(--tab-border);
+              }
+
+              .tab-wrapper {
+                .tab {
+                  box-shadow: none;
+                  max-width: 100% !important;
+                  background-color: var(--bg_dim) !important;
+                  color: var(--inactive-fg) !important;
+
+                  .tab-header {
+                    flex: 0 0 var(--tab-height) !important;
+                    padding-left: 0 !important;
+                    padding-right: 8px !important;
+
+                    .favicon {
+                      flex: 0 0 var(--tab-height) !important;
+                      width: var(--tab-height) !important;
+                      height: var(--tab-height) !important;
+                      display: flex;
+                      justify-content: flex-end;
+                      align-items: center;
+
+                      img {
+                        width: 12px !important;
+                        height: 12px !important;
+                      }
+                    }
+
+                    .title {
+                      height: var(--tab-height) !important;
+                      line-height: 1.4 !important;
+                      font-weight: 600 !important;
+                      font-size: 16px !important;
+                    }
+                  }
+                }
+
+                .tab.active {
+                  background-color: var(--active-bg) !important;
+                  color: var(--active-fg) !important;
+
+                  .title {
+                    font-weight: 700 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .toolbar-droptarget {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

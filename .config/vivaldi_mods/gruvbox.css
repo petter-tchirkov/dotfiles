@@ -1,0 +1,22 @@
+:root {
+    --bg_dim: #141617;
+
+    --bg0: #1d2021;
+    --fg0: #d4be98;
+
+    --red: #ea6962;
+    --green: #a9b665;
+    --yellow: #d8a657;
+    --orange: #e78a4e;
+    --blue: #7daea3;
+    --purple: #d3869b;
+    --aqua: #89b482;
+
+    --active-bg: #1a1d1e;
+    --active-fg: #d4be98;
+
+    --inactive-bg: #171a1a;
+    --inactive-fg: #928374;
+
+    --tab-border: #a89984;
+}
