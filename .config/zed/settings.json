@@ -1,5 +1,6 @@
 {
 	// Window & updates
+	"agent_ui_font_size": 16.0,
 	"auto_update_extensions": {
 		"vue": false
 	},
@@ -16,7 +17,7 @@
 	"lsp_document_colors": "background",
 	"hover_popover_delay": 100,
 	"vertical_scroll_margin": 15,
-	"buffer_line_height": "standard",
+	"buffer_line_height": "comfortable",
 	"edit_predictions": {
 		"mode": "subtle"
 	},
@@ -39,7 +40,8 @@
 		"right_padding": 0.05
 	},
 	"title_bar": {
-		"show_branch_icon": true, // Show/hide branch icon beside branch switcher
+		// Show/hide branch icon beside branch switcher
+		"show_branch_status_icon": true,
 		"show_branch_name": true, // Show/hide branch name
 		"show_project_items": false, // Show/hide project host and name
 		"show_onboarding_banner": false, // Show/hide onboarding banners
@@ -92,9 +94,6 @@
 		"indent_size": 30,
 		"button": false
 	},
-	"notification_panel": {
-		"button": false
-	},
 	"collaboration_panel": {
 		"button": false
 	},
@@ -109,12 +108,12 @@
 	},
 	// Fonts & theme
 	"icon_theme": "Colored Zed Icons Theme Light",
-	"ui_font_family": "SpaceMono Nerd Font Mono",
+	"ui_font_family": "SauceCodePro Nerd Font",
 	"ui_font_size": 15.0,
 	"ui_font_weight": 400.0,
-	"buffer_font_family": "SpaceMono Nerd Font Mono",
-	"buffer_font_size": 14.0,
-	"buffer_font_weight": 400,
+	"buffer_font_family": "SauceCodePro Nerd Font",
+	"buffer_font_size": 16.0,
+	"buffer_font_weight": 400.0,
 	"buffer_font_features": {
 		"calt": true,
 		"cv01": 7
@@ -127,7 +126,7 @@
 	},
 	// Terminal
 	"terminal": {
-		"font_family": "SpaceMono Nerd Font Mono",
+		"font_family": "SauceCodePro Nerd Font",
 		"font_size": 16,
 		"default_height": 9999,
 		"line_height": {
@@ -154,44 +153,25 @@
 	},
 	// Assistant
 	"agent": {
+		"dock": "right",
 		"default_model": {
-   "provider": "openai",
-   "model": "gpt-5.2-codex",
-   "enable_thinking": false
-  },
-  "use_modifier_to_send": true,
-		"play_sound_when_agent_done": true,
+			"provider": "openai",
+			"model": "gpt-5.2-codex",
+			"enable_thinking": false
+		},
+		"use_modifier_to_send": true,
+		"play_sound_when_agent_done": "always",
 		"default_profile": "ask"
 	},
 	"agent_servers": {
-  "codex-acp": {
-   "type": "registry"
-  }
- },
+		"codex-acp": {
+			"type": "registry"
+		}
+	},
 	// Language-specific overrides
 	"languages": {
-		"TypeScript": {
-			"language_servers": [
-				"vtsls"
-			],
-			"indent_guides": {
-				"coloring": "indent_aware"
-			},
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true,
-				"source.addMissingImports.ts": true
-			},
-			"formatter": []
-		},
-		"Vue.js": {
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			},
-			"formatter": []
-		},
 		"JSONC": {
 			"tab_size": 4,
-			"formatter": "language_server"
 		}
 	},
 	// LSP

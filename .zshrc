@@ -1,4 +1,3 @@
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -43,6 +42,9 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export QT_QPA_PLATFORMTHEME="gtk2"
 export PATH=.local/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+# export ALL_PROXY=socks5://127.0.0.1:1080
+# export HTTPS_PROXY=http://127.0.0.1:1087
 
 ### History configuration
 HISTSIZE=10000
@@ -79,6 +81,9 @@ alias kr="keyd reload"
 alias km="keyd monitor"
 alias ld="lazydocker"
 alias pt="~/.config/hypr/scripts/proton-tui"
+alias swc="nvim ~/.config/swayimg/init.lua"
+alias hcfg="nvim ~/.config/hypr/hyprland.conf"
+alias ncfg="nvim ~/.config/nvim/init.lua"
 
 ### CWD for Yazi
 function d() {
@@ -107,7 +112,8 @@ eval "$(starship init zsh)"
 # pnpm
 export PNPM_HOME="/home/theonlyvoivod/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+

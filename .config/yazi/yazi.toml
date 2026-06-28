@@ -3,29 +3,27 @@ show_hidden = true
 linemode = "size"
 sort_by = "natural"
 
-
 [opener]
 edit = [{ run = 'nvim "$@"', block = true, for = "unix" }]
 
 open = [
-    # Image files
-    { run = 'swayimg "$@"', desc = "Open with Swayimg", for = "linux", mime = "image/*" },
+  # Image files
+  { run = 'imv-dir "$@"', desc = "Open with imv", for = "linux", mime = "image/*" },
 
-    # Zip/Rar
-    { run = 'unzip -j "$@"', desc = "Unzip", for = "linux", mime = "application/zip" },
-    { run = 'unrar e -j "$@"', desc = "Unrar", for = "linux", mime = "application/rar" },
+  # Zip/Rar
+  { run = 'unzip -j "$@"', desc = "Unzip", for = "linux", mime = "application/zip" },
+  { run = 'unrar e -j "$@"', desc = "Unrar", for = "linux", mime = "application/rar" },
 
-    # Fallback for other file types
-    { run = 'xdg-open "$@"', desc = "Open with default application", for = "linux" },
+  # Fallback for other file types
+  { run = 'xdg-open "$@"', desc = "Open with default application", for = "linux" },
 ]
 
 play = [
-    # Sound files
-    { run = 'mpv "$@"', orphan = true, desc = "Play with MPV", for = "linux", mime = "audio/oga" },
+  # Sound files
+  { run = 'mpv "$@"', orphan = true, desc = "Play with MPV", for = "linux", mime = "audio/oga" },
 
-    # Videos 
-    { run = 'mpv --force-window "$@"', orphan = true, desc = "Play with MPV", for = "linux", mime = "video/*" },
-
+  # Videos
+  { run = 'mpv --force-window "$@"', orphan = true, desc = "Play with MPV", for = "linux", mime = "video/*" },
 ]
 
 [preview]

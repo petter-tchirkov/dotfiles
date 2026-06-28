@@ -1,0 +1,44 @@
+1782589550505	SessionStore	DEBUG	Can't read session file which doesn't exist: clean
+1782589550508	SessionStore	DEBUG	Can't read session file which doesn't exist: recovery
+1782589550520	SessionStore	DEBUG	Can't read session file which doesn't exist: recoveryBackup
+1782589550546	SessionStore	DEBUG	Can't read session file which doesn't exist: cleanBackup
+1782589550549	SessionStore	DEBUG	Can't read session file which doesn't exist: clean
+1782589550606	SessionStore	DEBUG	Can't read session file which doesn't exist: recovery
+1782589550617	SessionStore	DEBUG	Can't read session file which doesn't exist: recoveryBackup
+1782589550633	SessionStore	DEBUG	Can't read session file which doesn't exist: cleanBackup
+1782589550633	SessionStore	WARN	No readable session files found to restore, starting with empty session
+1782589550633	SessionStore	DEBUG	Completed SessionFile.read() with result.origin: empty
+1782589550633	SessionStore	DEBUG	No valid session found
+1782589551646	SessionStore	DEBUG	SessionSaver scheduling a state save during shutdown
+1782589551739	SessionStore	DEBUG	initSession willRestore: false, SessionStartup.sessionType: 0
+1782589552704	SessionStore.LogManager	DEBUG	Flushing file log
+1782589552723	SessionStore.LogManager	DEBUG	Log cleanup threshold time: 1781725552723
+1782589552724	SessionStore.LogManager	DEBUG	Done deleting files.
+1782589554019	SessionStore	DEBUG	SessionWriter.write wrote 543 bytes in 7ms
+1782589614316	SessionStore	DEBUG	SessionWriter.write wrote 11963 bytes in 0ms
+1782589674518	SessionStore	DEBUG	SessionWriter.write wrote 11983 bytes in 1ms
+1782589734676	SessionStore	DEBUG	SessionWriter.write wrote 11990 bytes in 1ms
+1782589794837	SessionStore	DEBUG	SessionWriter.write wrote 12220 bytes in 1ms
+1782589855037	SessionStore	DEBUG	SessionWriter.write wrote 12226 bytes in 1ms
+1782589915040	SessionStore	DEBUG	SessionWriter.write wrote 12223 bytes in 1ms
+1782589975393	SessionStore	DEBUG	SessionWriter.write wrote 12704 bytes in 1ms
+1782590035399	SessionStore	DEBUG	SessionWriter.write wrote 16985 bytes in 0ms
+1782590095498	SessionStore	DEBUG	SessionWriter.write wrote 30197 bytes in 1ms
+1782590155504	SessionStore	DEBUG	SessionWriter.write wrote 38488 bytes in 3ms
+1782590215507	SessionStore	DEBUG	SessionWriter.write wrote 39617 bytes in 1ms
+1782590275575	SessionStore	DEBUG	SessionWriter.write wrote 34063 bytes in 3ms
+1782590335624	SessionStore	DEBUG	SessionWriter.write wrote 33963 bytes in 1ms
+1782590395710	SessionStore	DEBUG	SessionWriter.write wrote 47466 bytes in 5ms
+1782590455721	SessionStore	DEBUG	SessionWriter.write wrote 48066 bytes in 1ms
+1782590515728	SessionStore	DEBUG	SessionWriter.write wrote 48327 bytes in 2ms
+1782590575785	SessionStore	DEBUG	SessionWriter.write wrote 48804 bytes in 1ms
+1782590636220	SessionStore	DEBUG	SessionWriter.write wrote 47291 bytes in 1ms
+1782590696360	SessionStore	DEBUG	SessionWriter.write wrote 47288 bytes in 2ms
+1782590890264	SessionStore	DEBUG	onClose, closing window isLastRegularWindow? true
+1782590890264	SessionStore	DEBUG	Saved closed window:8 with 4 open tabs, 8 closed tabs
+1782590890313	SessionStore	DEBUG	onQuitApplicationGranted, shutdown of 0 windows will be sync? false
+1782590890313	SessionStore	DEBUG	Last session save attempt: 193953ms ago
+1782590890333	SessionStore	DEBUG	SessionSave run called during shutdown
+1782590890334	SessionStore	DEBUG	SessionSaver writing state during shutdown
+1782590890378	SessionStore	DEBUG	SessionWriter.write wrote 47331 bytes in 42ms
+1782590890379	SessionStore	DEBUG	SessionSaver sessionstore-state-write-complete during shutdown
