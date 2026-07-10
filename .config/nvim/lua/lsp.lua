@@ -14,6 +14,8 @@ require("mason-lspconfig").setup({
 		"cssls",
 		"html",
 		"stylua",
+		"jsonls",
+		"gopls",
 	},
 	automatic_enable = true,
 	automatic_installation = false,
@@ -85,9 +87,21 @@ vim.lsp.config("emmet_language_server", {
 	end,
 })
 
+vim.lsp.config("gopls", {
+	settings = {
+		gopls = {
+			semanticTokens = false,
+		},
+	},
+})
+
 vim.lsp.enable({
 	"lua_ls",
 	"vtsls",
 	"vue_ls",
 	"emmet_language_server",
+    "gopls",
+    "cssls",
+    "jsonls",
+    "html"
 })

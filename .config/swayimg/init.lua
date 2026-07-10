@@ -6,7 +6,7 @@ swayimg.enable_overlay(false) -- window overlay mode
 swayimg.enable_exif_orientation(true) -- image orientation by EXIF
 swayimg.set_dnd_button("MouseRight") -- drag-and-drop mouse button
 
-local scroll_offset = 180
+local scroll_offset = 300
 
 -- Image list configuration
 

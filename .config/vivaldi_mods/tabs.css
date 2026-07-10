@@ -9,14 +9,18 @@
     font-family: var(--font-family) !important;
     font-size: var(--font-size) !important;
 
-        #tabs-tabbar-container.none {
-            display: none;
-        }
+    input {
+      font-family: "SauceCodePro Nerd Font", sans-serif;
+    }
+
+    #tabs-tabbar-container.none {
+      display: none;
+    }
 
     #tabs-tabbar-container {
       padding-top: 0 !important;
       padding-bottom: 0 !important;
-      background-color: var(--bg_dim) !important;
+      background-color: var(--bg0) !important;
       height: var(--tab-height) !important;
 
       #tabs-container {
@@ -32,6 +36,7 @@
 
         .resize {
           margin-right: 0 !important;
+          max-width: 100% !important;
 
           .tab-strip {
             display: grid;
@@ -39,6 +44,7 @@
 
             .tab-position {
               --Height: var(--tab-height) !important;
+              --Width: 100% !important;
               transform: translate(0) !important;
               position: relative !important;
               border-left: 1px solid var(--inactive-bg);
@@ -60,6 +66,10 @@
                     padding-left: 0 !important;
                     padding-right: 8px !important;
 
+                    .tab-audio {
+                      top: 3px !important;
+                    }
+
                     .favicon {
                       flex: 0 0 var(--tab-height) !important;
                       width: var(--tab-height) !important;
@@ -77,8 +87,9 @@
                     .title {
                       height: var(--tab-height) !important;
                       line-height: 1.4 !important;
-                      font-weight: 600 !important;
+                      font-weight: 400 !important;
                       font-size: 16px !important;
+                      text-align: center !important;
                     }
                   }
                 }

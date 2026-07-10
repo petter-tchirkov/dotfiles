@@ -1,0 +1,12 @@
+body {
+  toolbox.navigator-toolbox {
+    toolbar#nav-bar {
+      hbox.nav-bar-customization-target {
+        toolbarbutton#back-button,
+        toolbarbutton#forward-button {
+          display: none;
+        }
+      }
+    }
+  }
+}

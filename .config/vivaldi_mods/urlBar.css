@@ -28,11 +28,13 @@
         padding-left: 4px !important;
 
         .OmniDropdown {
-            padding-bottom: 24px !important;
+          padding-bottom: 24px !important;
         }
 
-        .UrlFieldInput {
+        #UrlFieldInput {
           text-align: center;
+          font-weight: 700;
+          line-height: 24px;
         }
 
         .UrlFragment-Wrapper {
@@ -51,7 +53,8 @@
     }
 
     .UrlBar-AddressField:focus-within {
-        border: none !important;
+      outline: none !important;
+
     }
 
     .toolbar-extensions {

@@ -70,20 +70,11 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 ### Aliases
 alias ls='ls -la --color'
-alias vim='nvim'
-alias c='clear'
 alias grep='grep --color=auto'
 alias l='lazygit'
-alias dcu="docker compose up -d"
-alias dcd="docker compose down"
-alias galdl="gallery-dl --limit-rate 10M"
-alias kr="keyd reload"
-alias km="keyd monitor"
-alias ld="lazydocker"
-alias pt="~/.config/hypr/scripts/proton-tui"
-alias swc="nvim ~/.config/swayimg/init.lua"
-alias hcfg="nvim ~/.config/hypr/hyprland.conf"
-alias ncfg="nvim ~/.config/nvim/init.lua"
+alias swc="nvim ~/dotfiles/.config/swayimg/init.lua"
+alias hcfg="nvim ~/dotfiles/.config/hypr/hyprland.conf"
+alias ncfg="nvim ~/dotfiles/.config/nvim/init.lua"
 
 ### CWD for Yazi
 function d() {

@@ -19,6 +19,7 @@ vim.pack.add({
 	"https://github.com/saghen/blink.lib",
 	"https://github.com/saghen/blink.cmp",
 	"https://github.com/echasnovski/mini.icons",
+	"https://github.com/akinsho/toggleterm.nvim",
 	"https://github.com/brenoprata10/nvim-highlight-colors",
 })
 
@@ -69,15 +70,6 @@ MiniSnippets.setup({
 MiniSnippets.start_lsp_server({ match = false })
 
 require("mini.surround").setup()
--- Default keymaps
--- | `sa` | Add surrounding or Direct with 'saiw' |
--- | `sd` | Delete surrounding |
--- | `sr` | Replace surrounding |
--- | `sf` | Find surrounding (right) |
--- | `sF` | Find surrounding (left) |
--- | `sh` | Highlight surrounding |
--- | `sn` | Update n_lines |
--- | `l` / `n` | as suffix for prev/next |
 
 require("lualine").setup({
 	options = {
@@ -117,9 +109,6 @@ require("lualine").setup({
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_y = { "progress" },
-		lualine_z = {
-			-- require('codex').status()
-		},
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -159,6 +148,11 @@ require("conform").setup({
 		css = { "oxfmt" },
 		scss = { "oxfmt" },
 		jsonc = { "oxfmt" },
+		go = { "gofumpt" },
+		gomod = { "gofumpt" },
+		gowork = { "gofumpt" },
+		gotmpl = { "gofumpt" },
+		conf = { "shfmt" },
 	},
 })
 
@@ -241,11 +235,15 @@ require("blink.cmp").setup({
 	cmdline = {
 		enabled = true,
 		keymap = {
-			preset = "inherit",
+			preset = "enter",
+			["<Tab>"] = { "select_next", "fallback" },
+			["<S-Tab>"] = { "select_prev", "fallback" },
 		},
 		completion = {
 			menu = {
 				auto_show = false,
+				scrollbar = false,
+				scrolloff = 1,
 			},
 		},
 	},
@@ -271,3 +269,14 @@ require("blink.cmp").setup({
 })
 
 require("nvim-highlight-colors").setup({})
+
+require("toggleterm").setup({
+	size = 13,
+	open_mapping = [[<c-s-\>]],
+	shade_filetypes = {},
+	shade_terminals = true,
+	shading_factor = "1",
+	start_in_insert = true,
+	persist_size = true,
+	-- direction = "float",
+})

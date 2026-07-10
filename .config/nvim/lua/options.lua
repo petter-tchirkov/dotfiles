@@ -130,5 +130,5 @@ vim.o.winborder = "solid"
 vim.o.foldmethod = "manual"
 
 vim.g.netrw_banner = 0
+
 vim.g.loaded_netrwPlugin = 1
--- vim.o.guicursor = ""
