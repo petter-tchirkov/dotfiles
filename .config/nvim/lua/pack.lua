@@ -153,6 +153,7 @@ require("conform").setup({
 		gowork = { "gofumpt" },
 		gotmpl = { "gofumpt" },
 		conf = { "shfmt" },
+		markdown = { "mdformat" },
 	},
 })
 

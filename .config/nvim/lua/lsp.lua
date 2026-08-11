@@ -68,6 +68,8 @@ vim.lsp.config("vue_ls", {
 	end,
 })
 
+vim.lsp.enable("markdown_oxide")
+
 vim.lsp.config("emmet_language_server", {
 	on_attach = function(client, bufnr)
 		vim.keymap.set("i", "<c-s>,", function()
@@ -100,8 +102,8 @@ vim.lsp.enable({
 	"vtsls",
 	"vue_ls",
 	"emmet_language_server",
-    "gopls",
-    "cssls",
-    "jsonls",
-    "html"
+	"gopls",
+	"cssls",
+	"jsonls",
+	"html",
 })

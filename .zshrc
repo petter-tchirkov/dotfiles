@@ -75,6 +75,8 @@ alias l='lazygit'
 alias swc="nvim ~/dotfiles/.config/swayimg/init.lua"
 alias hcfg="nvim ~/dotfiles/.config/hypr/hyprland.conf"
 alias ncfg="nvim ~/dotfiles/.config/nvim/init.lua"
+alias ys="yay -S"
+alias yr="yay -Rns"
 
 ### CWD for Yazi
 function d() {
